@@ -1,1 +1,21 @@
+ul {
+    display:flex;
+    flex-wrap:wrap;
+}
 
+li {
+    list-style-type:none;
+}
+
+.specialists {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    margin: 2px auto;
+    padding: 20px 20px;
+}
+
+.dupa {
+    flex-basis:20%;
+    padding:3px 3px;
+}

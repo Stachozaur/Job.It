@@ -1,8 +1,8 @@
-<h2>Specialists</h2>
-<div>
+<!--<h2>Specialists</h2>
+<div class="specialists">
   <ul>
     <li *ngFor="let specialist of specialists">
-      <div class="col-md-4">
+      <div class="col-md-4 dupa">
         <mdb-card [cascade]="true">
           <div class="view view-cascade overlay waves-light" mdbWavesEffect>
             <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.jpg"></mdb-card-img>
@@ -27,39 +27,32 @@
     </li>
   </ul>
 </div>
-  <button class="btn btn-primary btn-lg">pls</button>
+<button class="btn btn-primary btn-lg">pls</button>-->
 
 
-  <!--<div class="col-md-4">-->
-  <!--Card-->
-  <!--<mdb-card [cascade]="true" [narrower]="true">-->
-  <!--Card image-->
-  <!--<div class="view view-cascade overlay waves-light" mdbWavesEffect>
-    <mdb-card-img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg"></mdb-card-img>
-    <a>
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>-->
-  <!--/Card image-->
-  <!--<mdb-card-body [cascade]="true" class="text-center">-->
-  <!--Card content-->
-  <!--<h5 class="pink-text">
-    <mdb-icon fas icon="utensils"></mdb-icon> Culinary
-  </h5>-->
-  <!--Title-->
-  <!--<h4 class="card-title">Cheat day inspirations</h4>-->
-  <!--Text-->
-  <!--<mdb-card-text>
-      Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem
-      aperiam.
-    </mdb-card-text>
+<h2>Specialists</h2>
+<div class="specialists">
+      <div *ngFor="let specialist of specialists" class="col-sm-2 dupa">
+        <mdb-card [cascade]="true">
+          <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+            <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.jpg"></mdb-card-img>
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
 
-    <a mdbBtn color="unique" class="waves-light" mdbWavesEffect>Button</a>
+          <mdb-card-body [cascade]="true" class="text-center">
+            <h4 class="card-title">
+              <strong>{{specialist.name}}</strong>
+            </h4>
+            <h5>{{specialist.category}}</h5>
 
-  </mdb-card-body>-->
-  <!--/.Card content-->
-  <!--</mdb-card>-->
-  <!--/.Card-->
-  <!--</div>-->
+            <mdb-card-text>
+              {{specialist.description}}
+            </mdb-card-text>
 
-
+          </mdb-card-body>
+        </mdb-card>
+      </div>
+</div>
+<button class="btn btn-primary btn-lg">pls</button>
