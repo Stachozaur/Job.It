@@ -1,0 +1,28 @@
+@import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+
+// this code should be placed before imports of mdb scss core files
+// This code should be placed before imports of mdb scss core files
+$skins: () !default;
+$skins: map-merge(( "test": ( "skin-primary-color": #fff, "skin-navbar": #fff, "skin-footer-color": #fff, "skin-accent": #fff, "skin-flat": #fff, "skin-sidenav-item": #fff, "skin-sidenav-item-hover": #fff, "skin-gradient-start": #fff, "skin-gradient-end": #fff, "skin-mask-slight": #fff, "skin-mask-light": #fff, "skin-mask-strong": #fff, "skin-sn-child": #fff, "skin-btn-primary": #fff, "skin-btn-secondary": #fff, "skin-btn-default": #fff, "skin-text": #fff ) ), $skins);
+
+@import '~ng-uikit-pro-standard/assets/scss/core/mixins';
+@import '~ng-uikit-pro-standard/assets/scss/core/colors';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables';
+@import '~ng-uikit-pro-standard/assets/scss/core/variables-pro';
+@import '~ng-uikit-pro-standard/assets/scss/core/msc/skins-pro';
+
+// Also, there is a possibility to add a custom skin class to your theme
+// Add the following code after imports of mdb scss core files
+
+@each $skin, $data in $skins {
+  .#{$skin}-skin {
+
+    .custom-class {
+      background-color: map-get($data, skin-primary-color) !important;
+    }
+  }
+}
