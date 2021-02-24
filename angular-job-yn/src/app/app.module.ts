@@ -9,15 +9,12 @@ import { AppComponent } from './app.component';
 import { SpecialistListComponent } from './specialist-list/specialist-list.component';
 import { MdbModule } from 'mdb-angular-ui-kit';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SpecialistDetailComponent } from './specialist-detail/specialist-detail.component';
-
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SpecialistListComponent,
-    SpecialistDetailComponent,
+    SpecialistListComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +25,7 @@ import { SpecialistDetailComponent } from './specialist-detail/specialist-detail
       InMemoryDataService, { dataEncapsulation: false }),
     MdbModule,
     BrowserAnimationsModule,
-
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

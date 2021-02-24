@@ -1,4 +1,4 @@
-export interface ISpecialist {
+export interface Specialist {
   id: number;
   name: string;
   category: string;
