@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Specialist } from './specialist';
+import { ISpecialist } from './specialist';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -19,7 +19,7 @@ export class SpecialistService {
   constructor(
     private http: HttpClient) { }
 
-  getSpecialists(): Observable<Specialist[]> {
-    return this.http.get<Specialist[]>(this.specialistUrl);
+  getSpecialists(): Observable<ISpecialist[]> {
+    return this.http.get<ISpecialist[]>(this.specialistUrl);
   }
 }

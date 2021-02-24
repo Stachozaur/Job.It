@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Specialist } from '../specialist';
+import { ISpecialist } from '../specialist';
 import { SpecialistService } from '../specialist.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { SpecialistService } from '../specialist.service';
 export class SpecialistListComponent implements OnInit {
   constructor(private specialistService: SpecialistService) { }
 
-  specialists: Specialist[] = []
+  specialists: ISpecialist[] = []
 
   ngOnInit(): void {
     this.getSpecialists();

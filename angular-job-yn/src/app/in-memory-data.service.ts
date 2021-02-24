@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Specialist } from './specialist';
+import { ISpecialist } from './specialist';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +28,7 @@ export class InMemoryDataService implements InMemoryDbService {
   constructor() { }
 
 
-  genId<T extends Specialist>(myTable: T[]): number {
+  genId<T extends ISpecialist>(myTable: T[]): number {
     return myTable.length > 0 ? Math.max(...myTable.map(t => t.id)) + 1 : 1;
   }
 }
