@@ -4,9 +4,10 @@ import { SpecialistDetailComponent } from './specialist-detail/specialist-detail
 import { SpecialistListComponent } from './specialist-list/specialist-list.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/specialists', pathMatch: 'full' },
+  { path: 'spacialists', component: SpecialistListComponent },
   { path: 'specialist/:id', component: SpecialistDetailComponent },
-  { path: 'specialists', component: SpecialistListComponent }
-    ];
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
