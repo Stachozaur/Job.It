@@ -43,7 +43,11 @@
 
           <mdb-card-body [cascade]="true" class="text-center">
             <h4 class="card-title">
-              <strong>{{specialist.name}}</strong>
+              <strong>
+                <a routerLink="/specialist/{{specialist.id}}">
+                  {{specialist.name}}
+                </a>
+              </strong>
             </h4>
             <h5>{{specialist.category}}</h5>
 
