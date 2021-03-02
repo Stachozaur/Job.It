@@ -12,12 +12,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { SpecialistDetailComponent } from './specialist-detail/specialist-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SpecialistListComponent,
-    SpecialistDetailComponent
+    SpecialistDetailComponent,
     SpecialistListComponent,
     HeaderComponent,
     FooterComponent
@@ -32,6 +33,10 @@ import { FooterComponent } from './footer/footer.component';
     MdbModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot()
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
