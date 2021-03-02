@@ -17,7 +17,6 @@ export class SpecialistDetailComponent implements OnInit {
     let id = +this.route.snapshot.paramMap.get('id')!;
     this.getSpecialistById(id);
     this.specialist.longDescription = this.splitDescriptionByDash();
-    let splitedDescription = this.splitDescriptionByDash();
   }
 
   getSpecialistById(id: number) {

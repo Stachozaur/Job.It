@@ -5,4 +5,5 @@ export interface Specialist {
   description: string;
   longDescription: string;
   img: string;
+  adress: string;
 }

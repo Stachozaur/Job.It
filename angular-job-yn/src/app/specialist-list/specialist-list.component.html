@@ -13,7 +13,7 @@
           <!-- https://mdbootstrap.com/img/Photos/Others/men.jpg -->
           <mdb-card-body [cascade]="true" class="text-center textfield">
             <h4 class="card-title">
-              <strong>{{specialist.name}}</strong>
+              <strong><a routerLink="/specialist/{{specialist.id}}">{{specialist.name}}</a></strong>
             </h4>
             <h5>{{specialist.category}}</h5>
 
