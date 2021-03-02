@@ -1,11 +1,35 @@
-<div class="card" *ngIf="specialist">
-  <div class="card-header">
-    {{specialist.name}}
+<body>
+  <div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
   </div>
-  <div>
-    {{specialist.category}}
-  </div>
-  <div class="card-body">
-    {{specialist.longDescription}}
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>O mnie</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>{{specialist.description}}.</p>
+    </div>
+    <div class="card">
+      <h3>Zakres usług</h3>
+        <div *ngFor="let dash of specialist.longDescription">
+          - {{dash}}
+        </div>
+    </div>
+    <div class="card">
+      <h3>Adres</h3>
+      <p>tu jest adres</p>
+    </div>
   </div>
 </div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>

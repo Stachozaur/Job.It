@@ -10,7 +10,14 @@ export class InMemoryDataService implements InMemoryDbService {
     const specialists = [
       {
         id: 1, name: "Janusz", category: "Hydraulik", description: "Kompleksowe usługi hydrauliczne",
-        longDescription: "– Pogotowie hydrauliczne 24h – Montaż i naprawa armatury łazienkowe – Udrażnianie rur i kanalizacji- Montaże i wymiany hydrauliczne – Czyszczenie kanalizacji i odpływów – Naprawa WC – Naprawa i wymiana kranów oraz natrysków – Podłączanie pralek i zmywarek m– Modernizacja już istniejących instalacji hydraulicznych – Projektowanie nowych instalacji hydraulicznych – Drobne prace hydrauliczne"
+        longDescription: [
+          "Pogotowie hydrauliczne 24h",
+         "Montaż i naprawa armatury łazienkowe", "Udrażnianie rur i kanalizacji",
+         "Montaże i wymiany hydrauliczne", "Czyszczenie kanalizacji i odpływów",  "Naprawa WC",
+         "Naprawa i wymiana kranów oraz natrysków", "Podłączanie pralek i zmywarek", 
+         "Modernizacja już istniejących instalacji hydraulicznych", "Projektowanie nowych instalacji hydraulicznych", 
+         "Drobne prace hydrauliczne"
+        ]
       },
       { id: 2, name: "Marian", category: "Fryzjer", description: "Salon fryzjerski na ul. Pięknej", longDescription: "Boki króto, góra długo? Nie ma sprawy, ale ombre i trwała to także moja wizytówka!" },
       { id: 3, name: "Ania", category: "Prawnik", description: "Pomoc prawna", longDescription: "Sporządzanie i negocjowanie umów najmu, reprezentowanie wynajmujących i najemców, badania prawne (audyty) nieruchomości, reprezentacja w sporach ze wspólnotami mieszkaniowymi, umowy deweloperskie." },

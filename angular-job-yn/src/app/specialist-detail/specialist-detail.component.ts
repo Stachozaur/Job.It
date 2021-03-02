@@ -15,13 +15,18 @@ export class SpecialistDetailComponent implements OnInit {
 
   ngOnInit(): void {
     let id = +this.route.snapshot.paramMap.get('id')!;
-    this.getSpecialistById(id)
-
+    this.getSpecialistById(id);
+    this.specialist.longDescription = this.splitDescriptionByDash();
+    let splitedDescription = this.splitDescriptionByDash();
   }
 
   getSpecialistById(id: number) {
       this.specialistService.getSpecialistById(id)
           .subscribe(specialist => this.specialist = specialist);
+  }
+
+  splitDescriptionByDash(){
+    return this.specialist.longDescription.split('-').toString();
   }
 
 }
