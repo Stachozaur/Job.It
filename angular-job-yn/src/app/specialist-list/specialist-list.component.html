@@ -1,15 +1,17 @@
-<h2>Specialists</h2>
+<h2 class="text-center">Specialists</h2>
 <div class="specialists">
-      <div *ngFor="let specialist of specialists" class="col-sm-2 dupa">
-        <mdb-card [cascade]="true">
-          <div class="view view-cascade overlay waves-light" mdbWavesEffect>
-            <mdb-card-img src="https://mdbootstrap.com/img/Photos/Others/men.jpg"></mdb-card-img>
+      <div *ngFor="let specialist of specialists" class="specialist">
+        <mdb-card [cascade]="true" class="karta">
+          <div class="view view-cascade overlay waves-light logotype" mdbWavesEffect>
+            <!-- <mdb-card-img src="{{specialist.img}}" class="krzysiu"></mdb-card-img> -->
+            <img class="img-fluid" src="{{specialist.img}}" alt="undefined">
             <a>
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
-
-          <mdb-card-body [cascade]="true" class="text-center">
+          <div class="card-body-mdb">
+          <!-- https://mdbootstrap.com/img/Photos/Others/men.jpg -->
+          <mdb-card-body [cascade]="true" class="text-center textfield">
             <h4 class="card-title">
               <strong>{{specialist.name}}</strong>
             </h4>
@@ -20,6 +22,7 @@
             </mdb-card-text>
 
           </mdb-card-body>
+          </div>
         </mdb-card>
       </div>
 </div>

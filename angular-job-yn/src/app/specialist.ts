@@ -3,4 +3,5 @@ export interface Specialist {
   name: string;
   category: string;
   description: string;
+  img: string;
 }
