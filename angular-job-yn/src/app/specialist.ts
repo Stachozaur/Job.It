@@ -4,4 +4,5 @@ export interface Specialist {
   category: string;
   description: string;
   longDescription: string;
+  img: string;
 }

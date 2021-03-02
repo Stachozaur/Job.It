@@ -7,15 +7,62 @@ li {
     list-style-type:none;
 }
 
+// .specialists {
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction:row;
+//     margin: 2px auto;
+//     padding: 20px 20px;
+// }
+
 .specialists {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:row;
-    margin: 2px auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    margin:2px auto;
     padding: 20px 20px;
 }
 
-.dupa {
-    flex-basis:20%;
+.specialist {
+    display: inline-block;
+    overflow: hidden;
     padding:3px 3px;
 }
+
+
+.logotype {
+    width: 227px;
+    height: 240px;
+}
+
+.textfield{
+    width: 240px;
+    height: 150px;
+}
+
+.karta {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+.logotype img{
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+}
+
+
+.card-body-mdb {
+    width: 240px;
+    height: 180px;
+}
+
+@media (max-width: 992px) {
+    .specialists { grid-template-columns: repeat(3, 1fr);}
+}   

@@ -1,0 +1,19 @@
+.header{
+    border-left: 1px lightgrey solid;
+    border-right: 1px lightgrey solid;
+    border-bottom: 1px lightgrey solid;
+    padding: 12px;
+    margin-bottom: 2px;
+}
+
+.header nav {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    float: right;
+    background: white;
+}
+
+.navbar ul li a:hover {
+    color: purple;
+}
