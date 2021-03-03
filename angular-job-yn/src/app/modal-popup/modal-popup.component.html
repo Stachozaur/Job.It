@@ -1,4 +1,10 @@
-<button type="button" mdbBtn color="primary" class="taskModal" (click)="basicModal.show()" mdbWavesEffect>{{task.name}}</button>
+<div class="task" (click)="basicModal.show()" mdbWavesEffect>
+  <div class="task-name"></div>{{task.name}}
+  <div class="task-category-image"><img src="{{task.category_img}}" /></div>
+  <div class="task-price">{{task.price}}</div>
+  <div class="task-estimated_time">{{task.estimated_time}}</div>
+
+</div>
 
 <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

@@ -10,8 +10,9 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const specialists = [
       {
-        id: 1, name: "Janusz", category: "Hydraulik", description: "Kompleksowe usługi hydrauliczne", longDescription: ["– Pogotowie hydrauliczne 24h", "– Montaż i naprawa armatury łazienkowe", "– Udrażnianie rur i kanalizacji", "– Montaże i wymiany hydrauliczne", "– Czyszczenie kanalizacji i odpływów", "– Naprawa WC", "– Naprawa i wymiana kranów oraz natrysków", "– Podłączanie pralek i zmywarek", "– Modernizacja już istniejących instalacji hydraulicznych", "– Projektowanie nowych instalacji hydraulicznych", "– Drobne prace hydrauliczne"], img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj', adress: '../assets/images/Adres-map.PNG' }, 
-      { id: 2, name: "Marian", category: "Fryzjer",  description: "Salon fryzjerski na ul. Pięknej", longDescription: "Boki króto, góra długo? Nie ma sprawy, ale ombre i trwała to także moja wizytówka!", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
+        id: 1, name: "Janusz", category: "Hydraulik", description: "Kompleksowe usługi hydrauliczne", longDescription: ["– Pogotowie hydrauliczne 24h", "– Montaż i naprawa armatury łazienkowe", "– Udrażnianie rur i kanalizacji", "– Montaże i wymiany hydrauliczne", "– Czyszczenie kanalizacji i odpływów", "– Naprawa WC", "– Naprawa i wymiana kranów oraz natrysków", "– Podłączanie pralek i zmywarek", "– Modernizacja już istniejących instalacji hydraulicznych", "– Projektowanie nowych instalacji hydraulicznych", "– Drobne prace hydrauliczne"], img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj', adress: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus &q=Grzybowska10,Warszawa" }, 
+      {
+        id: 2, name: "Marian", category: "Fryzjer", description: "Salon fryzjerski na ul. Pięknej", longDescription: "Boki króto, góra długo? Nie ma sprawy, ale ombre i trwała to także moja wizytówka!", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj'},
       { id: 3, name: "Ania", category: "Prawnik", description: "Pomoc prawna", longDescription: "Sporządzanie i negocjowanie umów najmu, reprezentowanie wynajmujących i najemców, badania prawne (audyty) nieruchomości, reprezentacja w sporach ze wspólnotami mieszkaniowymi, umowy deweloperskie.", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 4, name: "Kabura", category: "trener personalny", description: "Treningi oraz naprawa ciała", longDescription: "Profesjonalny trening pod trójbój, powerlifting, strongman. Diagnoza oraz wzmacnianie słabych ogniw, rozpisany trening, prowadzenie przez 3 miesiące!", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 5, name: "Krzyś", category: "influencer", description: "Ładne fotki na insta bez kasi", longDescription: "Profesjonalne zajęcia z robienia ładnych zdjęć, ale bez większego pomysłu na życie (możliwość wstawienia 2 zdjęć ze mną na story!)", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
@@ -35,6 +36,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: "I need a hair stylist to do my hair for a wedding.",
         price: 40,
         estimatedTime: 120,
+        category_img: "./assets/images/fryzjertransparent.png"
       },
       {
         id: 3,
@@ -43,14 +45,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: "Looking for powerlifting trainer for few sessions in GainGym",
         price: 50,
         estimatedTime: 180,
-      },
-      {
-        id: 4,
-        name: "garden design",
-        category: "gardening",
-        description: "looking for a garden designer for a small home garden",
-        price: 2300,
-        
+        category_img: "./assets/images/silkatransparent.png"
       },
       {
         id: 5,
@@ -59,8 +54,8 @@ export class InMemoryDataService implements InMemoryDbService {
         description: "I need someone to walk my dog for 40 minutes",
         price: 20,
         estimatedTime: 40,
+        category_img: "./assets/images/pieseutransparent.png"
       },
-      {}
     ]
     return { specialists, tasks }
   };

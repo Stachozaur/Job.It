@@ -109,18 +109,3 @@ body {
   margin: 1rem;
 }
 
-.task {
-  /*  padding: 1rem 2.4rem;
-  width: 95%;
-  border: 2px solid;
-  color: black;*/
-  /*  border-radius: 10px;
-  margin: 0.4rem;*/
-
-  margin: 0 auto;
-  max-width: 90%;
-}
-
-  .task:hover {
-    background-color: #f0f0f5;
-  }
