@@ -22,7 +22,7 @@ import { SpecialistDetailComponent } from './specialist-detail/specialist-detail
     SpecialistListComponent,
     HeaderComponent,
     FooterComponent,
-    ModalPopupComponent
+    ModalPopupComponent,
     SpecialistListComponent,
     SpecialistDetailComponent
   ],
