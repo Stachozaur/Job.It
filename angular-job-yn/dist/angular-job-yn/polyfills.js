@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\stach\source\repos\Job.yn\angular-job-yn\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\Users\48781\Desktop\Job.yn\Job.yn\angular-job-yn\src\polyfills.ts */"hN/g");
 
 
 /***/ }),

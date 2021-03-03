@@ -5,7 +5,7 @@ import { SpecialistListComponent } from './specialist-list/specialist-list.compo
 
 const routes: Routes = [
   { path: '', redirectTo: '/specialists', pathMatch: 'full' },
-  { path: 'spacialists', component: SpecialistListComponent },
+  { path: 'specialists', component: SpecialistListComponent },
   { path: 'specialist/:id', component: SpecialistDetailComponent },
 ];
 
