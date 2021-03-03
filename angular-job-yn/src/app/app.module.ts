@@ -13,6 +13,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SpecialistDetailComponent } from './specialist-detail/specialist-detail.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SpecialistDetailComponent } from './specialist-detail/specialist-detail
     SpecialistDetailComponent,
     SpecialistListComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

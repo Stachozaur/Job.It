@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Specialist } from './specialist';
+import { UserTask } from './userTask';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       { id: 2, name: "Marian", category: "Fryzjer", description: "Salon fryzjerski na ul. Pięknej", longDescription: "Boki króto, góra długo? Nie ma sprawy, ale ombre i trwała to także moja wizytówka!", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 3, name: "Ania", category: "Prawnik", description: "Pomoc prawna", longDescription: "Sporządzanie i negocjowanie umów najmu, reprezentowanie wynajmujących i najemców, badania prawne (audyty) nieruchomości, reprezentacja w sporach ze wspólnotami mieszkaniowymi, umowy deweloperskie.", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
-      { id: 4, name: "Kabura", category: "Trener personalny", description: "Treningi oraz naprawa ciała", longDescription: "Profesjonalny trening pod trójbój, powerlifting, strongman. Diagnoza oraz wzmacnianie słabych ogniw, rozpisany trening, prowadzenie przez 3 miesiące!", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
+      { id: 4, name: "Kabura", category: "Trener personalny", description: "trujbuj siłowy", longDescription: "Profesjonalny trening pod trójbój, powerlifting, strongman. Diagnoza oraz wzmacnianie słabych ogniw, rozpisany trening, prowadzenie przez 3 miesiące!", img: 'https://i.pinimg.com/originals/65/af/eb/65afeb3b044e0f817ab4c6127150d444.png' },
       { id: 5, name: "Krzyś", category: "Influencer", description: "Ładne fotki na insta bez kasi", longDescription: "Profesjonalne zajęcia z robienia ładnych zdjęć, ale bez większego pomysłu na życie (możliwość wstawienia 2 zdjęć ze mną na story!)", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 6, name: "Kononowicz", category: "Mleczarz", description: "Mleczko boże", longDescription: "Nie straszne mi żadne mleko! Może i w wyborach mi nie pykło, ale mleko Twojej krowy przyjmę jak swoje!", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 7, name: "Marcin N", category: "Trener boksu", description: "nauka klepania", longDescription: "nauczę Cię klepac nawet w boksie", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
@@ -33,7 +34,42 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 13, name: "Marcin", category: "C# Specialist", description: "Aplikacje Obiektowe C#", longDescription: 'Programowanie obiektowe C#, zaawansowane aplikacje .NET oraz Xamarin', img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 14, name: "Dominik", category: "C# Specialist", description: "Nieodpisywanie na Discord", longDescription: '.Netowe aplikacjie oraz C#, ale i tak nie znajdę czasu by wam odpisać.', img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' }
     ];
-    return { specialists }
+    const userTasks = [
+      {
+        id: 1,
+        name: "bridal hairstyle",
+        category: "hairdress",
+        description: "I need a hair stylist to do my hair for a wedding.",
+        price: 40,
+        estimatedTime: 120,
+      },
+      {
+        id: 2,
+        name: "powerlifting training",
+        category: "sport",
+        description: "Looking for powerlifting trainer for few sessions in GainGym",
+        price: 50,
+        estimatedTime: 180,
+      },
+      {
+        id: 3,
+        name: "garden design",
+        category: "gardening",
+        description: "looking for a garden designer for a small home garden",
+        price: 2300,
+        
+      },
+      {
+        id: 4,
+        name: "dog walking",
+        category: "animals",
+        description: "I need someone to walk my dog for 40 minutes",
+        price: 20,
+        estimatedTime: 40,
+      },
+      {}
+    ]
+    return { specialists, userTasks }
   };
   constructor() { }
 
