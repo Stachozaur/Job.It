@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserTask } from '../userTask';
-import { UserTaskService } from '../userTask.service';
+import { Task } from '../ITasks';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-home-page',
@@ -8,17 +8,17 @@ import { UserTaskService } from '../userTask.service';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  constructor(private userTaskService: UserTaskService) { }
+  constructor(private userTaskService: TaskService) { }
 
-  userTasks: UserTask[] = [];
+  tasks: Task[] = [];
 
   ngOnInit(): void {
     this.getUserTasks();
   }
 
   getUserTasks() {
-    this.userTaskService.getUserTasks()
-      .subscribe(userTasks => this.userTasks = userTasks);
+    this.userTaskService.getTasks()
+      .subscribe(tasks => this.tasks = tasks);
   }
 
 }
