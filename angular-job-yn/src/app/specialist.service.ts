@@ -9,7 +9,6 @@ import { error } from 'protractor';
   providedIn: 'root'
 })
 export class SpecialistService {
-
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -21,5 +20,10 @@ export class SpecialistService {
 
   getSpecialists(): Observable<Specialist[]> {
     return this.http.get<Specialist[]>(this.specialistUrl);
+  }
+
+  getSpecialistById(id: number): Observable<Specialist> {
+    const url = `${this.specialistUrl}/${id}`
+    return this.http.get<Specialist>(url);
   }
 }

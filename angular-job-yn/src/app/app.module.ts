@@ -14,6 +14,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModalPopupComponent } from './modal-popup/modal-popup.component';
+import { SpecialistDetailComponent } from './specialist-detail/specialist-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,8 @@ import { ModalPopupComponent } from './modal-popup/modal-popup.component';
     HeaderComponent,
     FooterComponent,
     ModalPopupComponent
+    SpecialistListComponent,
+    SpecialistDetailComponent
   ],
   imports: [
     BrowserModule,
