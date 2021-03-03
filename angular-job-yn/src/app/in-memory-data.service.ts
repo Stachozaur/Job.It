@@ -9,7 +9,8 @@ import { Task } from './ITasks';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const specialists = [
-      { id: 1, name: "Janusz", category: "Hydraulik", description: "Kompleksowe usługi hydrauliczne",  longDescription: "– Pogotowie hydrauliczne 24h – Montaż i naprawa armatury łazienkowe – Udrażnianie rur i kanalizacji- Montaże i wymiany hydrauliczne – Czyszczenie kanalizacji i odpływów – Naprawa WC – Naprawa i wymiana kranów oraz natrysków – Podłączanie pralek i zmywarek m– Modernizacja już istniejących instalacji hydraulicznych – Projektowanie nowych instalacji hydraulicznych – Drobne prace hydrauliczne", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
+      {
+        id: 1, name: "Janusz", category: "Hydraulik", description: "Kompleksowe usługi hydrauliczne", longDescription: ["– Pogotowie hydrauliczne 24h", "– Montaż i naprawa armatury łazienkowe", "– Udrażnianie rur i kanalizacji", "– Montaże i wymiany hydrauliczne", "– Czyszczenie kanalizacji i odpływów", "– Naprawa WC", "– Naprawa i wymiana kranów oraz natrysków", "– Podłączanie pralek i zmywarek", "– Modernizacja już istniejących instalacji hydraulicznych", "– Projektowanie nowych instalacji hydraulicznych", "– Drobne prace hydrauliczne"], img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj', adress: '../assets/images/Adres-map.PNG' }, 
       { id: 2, name: "Marian", category: "Fryzjer",  description: "Salon fryzjerski na ul. Pięknej", longDescription: "Boki króto, góra długo? Nie ma sprawy, ale ombre i trwała to także moja wizytówka!", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 3, name: "Ania", category: "Prawnik", description: "Pomoc prawna", longDescription: "Sporządzanie i negocjowanie umów najmu, reprezentowanie wynajmujących i najemców, badania prawne (audyty) nieruchomości, reprezentacja w sporach ze wspólnotami mieszkaniowymi, umowy deweloperskie.", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 4, name: "Kabura", category: "trener personalny", description: "Treningi oraz naprawa ciała", longDescription: "Profesjonalny trening pod trójbój, powerlifting, strongman. Diagnoza oraz wzmacnianie słabych ogniw, rozpisany trening, prowadzenie przez 3 miesiące!", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
@@ -18,7 +19,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 7, name: "Marcin N", category: "Boxing Coach", description: "nauka klepania", longDescription: "nauczę Cię klepac nawet w boksie", img: 'https://i.wpimg.pl/O/730x0/m.fitness.wp.pl/new-project-10-daa72fd1c2a3c0dae.png' },
       { id: 8, name: "Svietlana", category: "Masseuse", description: "Treapia manualna", longDescription: "HiropraktykaTerapia manualna, fala uderzeniowa, laser wysokoenergetyczny, elektro-prądy, pole magnet. ultradźwięki, ćwiczenia korekcyjne, masaż, kinesiotaping", img: 'https://i.pinimg.com/originals/1c/f7/9f/1cf79f2b20a2ce1ab4c78656062af673.jpg' },
       { id: 9, name: "Mikołaj", category: "Python Developer", description: "Aplikacje Pythonowe", longDescription: 'Podejmę się stworzenia aplikacji bazodanowych, tworzenia backendu stron WWW, tworzenia oprogramowania dla SI oraz skryptów systemowych i automatyzujących pracę.', img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj'},
-      { id: 10, name: "Adam", category: "Algorithmics", ddescription: "Aplikacje Javove z użyciem algorytmów", longDescription: 'Programowanie dynamiczne (programowanie algorytmów do rozwiązywania zagadnień optymalizacyjnych)', img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
+      { id: 10, name: "Adam", category: "Algorithmics", description: "Aplikacje Javove z użyciem algorytmów", longDescription: 'Programowanie dynamiczne (programowanie algorytmów do rozwiązywania zagadnień optymalizacyjnych)', img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 11, name: "Maciej", category: "Angular Developer", description:"Sterowniki do urządzeń muzycznych", longDescription: 'Programowanie sterowników do urządzeń muzycznych', img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 12, name: "Piotr", category: "Javascript Developer", description: "Strony i aplikacje webowe", longDescription: 'Tworzenie stron WWW, zapewniając interaktywność stron oraz obsługę zdarzeń, walidacji formularzy czy budowanie elementów nawigacyjnych. ', img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 13, name: "Marcin", category: "C# Developer",  description: "Aplikacje Obiektowe C#", longDescription: 'Programowanie obiektowe C#, zaawansowane aplikacje .NET oraz Xamarin', img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
@@ -26,11 +27,9 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
 
     const tasks = [
-      {id: 1, name: "Zabij Koluszkowskiego Orangutana", category: "Murder", price: 500}
-    ];
-    const userTasks = [
+      {id: 1, name: "Zabij Koluszkowskiego Orangutana", category: "Murder", price: 500},
       {
-        id: 1,
+        id: 2,
         name: "bridal hairstyle",
         category: "hairdress",
         description: "I need a hair stylist to do my hair for a wedding.",
@@ -38,7 +37,7 @@ export class InMemoryDataService implements InMemoryDbService {
         estimatedTime: 120,
       },
       {
-        id: 2,
+        id: 3,
         name: "powerlifting training",
         category: "sport",
         description: "Looking for powerlifting trainer for few sessions in GainGym",
@@ -46,7 +45,7 @@ export class InMemoryDataService implements InMemoryDbService {
         estimatedTime: 180,
       },
       {
-        id: 3,
+        id: 4,
         name: "garden design",
         category: "gardening",
         description: "looking for a garden designer for a small home garden",
@@ -54,7 +53,7 @@ export class InMemoryDataService implements InMemoryDbService {
         
       },
       {
-        id: 4,
+        id: 5,
         name: "dog walking",
         category: "animals",
         description: "I need someone to walk my dog for 40 minutes",
@@ -63,7 +62,6 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {}
     ]
-    return { specialists, userTasks }
     return { specialists, tasks }
   };
   constructor() { }

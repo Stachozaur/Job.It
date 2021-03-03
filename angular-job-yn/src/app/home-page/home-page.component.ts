@@ -13,12 +13,14 @@ export class HomePageComponent implements OnInit {
   tasks: Task[] = [];
 
   ngOnInit(): void {
-    this.getUserTasks();
+    this.getTasks();
   }
 
-  getUserTasks() {
+  getTasks() {
     this.userTaskService.getTasks()
       .subscribe(tasks => this.tasks = tasks);
   }
+
+
 
 }

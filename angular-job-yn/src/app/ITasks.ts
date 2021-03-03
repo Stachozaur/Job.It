@@ -4,4 +4,6 @@ export interface Task {
   category: string;
   price: number;
   address: string;
+  estimated_time: number;
+  category_img: string;
 }

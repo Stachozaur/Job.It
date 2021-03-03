@@ -15,7 +15,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ModalPopupComponent } from './modal-popup/modal-popup.component';
 import { SpecialistDetailComponent } from './specialist-detail/specialist-detail.component';
-import { SpecialistDetailComponent } from './specialist-detail/specialist-detail.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
@@ -26,8 +25,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     SpecialistListComponent,
     HeaderComponent,
     FooterComponent,
-    HomePageComponent
-    HeaderComponent,
+    HomePageComponent,
     FooterComponent,
     ModalPopupComponent,
     SpecialistListComponent,

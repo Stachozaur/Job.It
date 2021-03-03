@@ -6,33 +6,42 @@
       <h5>{{specialist.category}}, March 3, 2021</h5>
       <div class="card-body card-body-cascade text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-iteration-count: 1; animation-delay: 0.2s;">
 
-        <a class="btn btn-primary btn-lg waves-effect waves-light">Um�w wizyt�</a>
-        <a class="btn btn-secondary btn-lg waves-effect waves-light">Napisz wiadomo��</a><a class="btn btn-default btn-lg waves-effect waves-light">Wystaw Opini�</a>
-
+        <a class="btn btn-primary btn-lg waves-effect waves-light">Visit</a>
+        <a class="btn btn-secondary btn-lg waves-effect waves-light">Message</a><a class="btn btn-default btn-lg waves-effect waves-light">Send Feedback</a>
 
       </div>
+
       <div class="card">
-        <h3>Zakres us�ug</h3>
-        <div *ngFor="let dash of specialist.longDescription">
-          - {{dash}}
+        <h3>Services</h3>
+        <div *ngFor="let service of specialist.longDescription">
+          {{service}}
+
         </div>
       </div>
-
-    </div>
+      </div>
     <div class="rightcolumn">
       <div class="card">
-        <h2>O mnie</h2>
+        <h2>About</h2>
+
         <div class="fakeimg" style="height:350px;"><img class="img-fluid" src="{{specialist.img}}" alt="undefined" style="height:300px;"></div>
-        <p>{{specialist.description}}.</p>
+        <p>{{specialist.description}}</p>
       </div>
 
       <div class="card">
-        <h3>Adres</h3>
-        <img class="img-fluid" src="{{specialist.adress}}" alt="undefined" style="height:300px;">
+        <h3>Adress</h3>
+        <iframe width="400"
+                height="400"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus
+    &q=Polna10,Warszawa">
+        </iframe>
       </div>
 
     </div>
-</div>
+    
+  </div>
 
 <app-modal-popup [id]="specialist.id"></app-modal-popup>
 

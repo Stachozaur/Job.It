@@ -1,4 +1,4 @@
-<button type="button" mdbBtn color="primary" class="relative waves-light" (click)="basicModal.show()" mdbWavesEffect>Modal</button>
+<button type="button" mdbBtn color="primary" class="taskModal" (click)="basicModal.show()" mdbWavesEffect>{{task.name}}</button>
 
 <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -18,7 +18,7 @@
   loading="lazy"
   allowfullscreen
   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus
-    &q=Koluszki">
+    &q=Polna10,Warszawa">
   </iframe>
       </div>
       <div class="modal-footer">

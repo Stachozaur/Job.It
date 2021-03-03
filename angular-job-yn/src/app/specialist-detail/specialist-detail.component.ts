@@ -16,7 +16,7 @@ export class SpecialistDetailComponent implements OnInit {
   ngOnInit(): void {
     let id = +this.route.snapshot.paramMap.get('id')!;
     this.getSpecialistById(id);
-    this.specialist.longDescription = this.splitDescriptionByDash();
+
   }
 
   getSpecialistById(id: number) {
@@ -24,9 +24,9 @@ export class SpecialistDetailComponent implements OnInit {
           .subscribe(specialist => this.specialist = specialist);
   }
 
-  splitDescriptionByDash(){
-    return this.specialist.longDescription.split('-').toString();
-  }
+  //splitDescriptionByDash(){
+  //  return this.specialist.longDescription.split('-');
+  //}
 
 }
 
