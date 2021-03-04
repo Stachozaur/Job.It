@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ModalPopupComponent } from './modal-popup/modal-popup.component';
 import { SpecialistDetailComponent } from './specialist-detail/specialist-detail.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,9 @@ import { HomePageComponent } from './home-page/home-page.component';
     MdbModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
-    NgbModule
+    NgbModule,
+    FontAwesomeModule,
+    FaIconLibrary
   ],
   exports: [
     HeaderComponent,

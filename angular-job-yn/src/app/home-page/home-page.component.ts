@@ -8,7 +8,8 @@ import { TaskService } from '../task.service';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  constructor(private userTaskService: TaskService) { }
+  constructor(private userTaskService: TaskService) {
+  }
 
   tasks: Task[] = [];
 

@@ -2,6 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Task } from '../ITasks';
 import { TaskService} from '../task.service';
 import { ActivatedRoute } from '@angular/router';
+import { faDumbbell, faCut, faDog, IconName, IconPrefix } from '@fortawesome/free-solid-svg-icons';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+
+
 
 
 @Component({
@@ -13,8 +17,17 @@ export class ModalPopupComponent implements OnInit {
 
   @Input() id! : number;
 
-  task! : Task;
-  constructor(private route: ActivatedRoute, private taskService : TaskService ) { }
+
+
+  task!: Task;
+
+  iconName: IconName = "dog";
+  //dog: IconName = 'dog';
+  //cut: IconName = 'cut';
+  iconPrefix: IconPrefix = 'fas';
+  constructor(private route: ActivatedRoute, private taskService: TaskService, library: FaIconLibrary) {
+    library.addIcons(faDumbbell, faCut, faDog);
+  }
 
   ngOnInit(): void {
     // let id = +this.route.snapshot.paramMap.get('id')!;
@@ -24,5 +37,6 @@ export class ModalPopupComponent implements OnInit {
   getTaskById(id: number) {
     this.taskService.getSpecialistById(id)
         .subscribe(task => this.task = task);
-}
+  }
+  
 }

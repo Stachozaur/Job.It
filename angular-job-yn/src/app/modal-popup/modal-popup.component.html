@@ -1,5 +1,5 @@
 <div class="task" (click)="basicModal.show()" mdbWavesEffect>
-  <div class="task-item" id="task-image"><img src="{{task.category_img}}" /></div>
+  <div class="task-item" id="task-image"><fa-icon [icon]="[iconPrefix , iconName]"></fa-icon></div>
   <div class="task-item" id="task-name">{{task.name}}</div>
 
   <div class="task-item" id="task-price">{{task.price}}</div>
