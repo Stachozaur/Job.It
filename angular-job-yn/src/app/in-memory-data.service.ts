@@ -102,7 +102,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: "I need a hair stylist to do my hair for a wedding.",
         price: 40,
         estimatedTime: 120,
-        category_img: "cut",
+        category_img: 'cut',
         color: "purple"
       },
       {
@@ -112,7 +112,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: "Looking for powerlifting trainer for few sessions in GainGym",
         price: 50,
         estimatedTime: 180,
-        category_img: "dumbbell",
+        category_img: 'dumbbell',
         color: "red"
       },
       {

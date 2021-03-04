@@ -16,7 +16,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ModalPopupComponent } from './modal-popup/modal-popup.component';
 import { SpecialistDetailComponent } from './specialist-detail/specialist-detail.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { FontAwesomeRendererComponent } from './font-awesome-renderer/font-awesome-renderer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
     FooterComponent,
     ModalPopupComponent,
     SpecialistListComponent,
-    SpecialistDetailComponent
+    SpecialistDetailComponent,
+    FontAwesomeRendererComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,6 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
     MDBBootstrapModule.forRoot(),
     NgbModule,
     FontAwesomeModule,
-    FaIconLibrary
   ],
   exports: [
     HeaderComponent,

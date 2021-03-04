@@ -4,6 +4,7 @@ import { TaskService} from '../task.service';
 import { ActivatedRoute } from '@angular/router';
 import { faDumbbell, faCut, faDog, IconName, IconPrefix } from '@fortawesome/free-solid-svg-icons';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
 
 
 
@@ -29,10 +30,14 @@ export class ModalPopupComponent implements OnInit {
     library.addIcons(faDumbbell, faCut, faDog);
   }
 
+  
+
+
   ngOnInit(): void {
     // let id = +this.route.snapshot.paramMap.get('id')!;
     this.getTaskById(this.id)
   }
+
 
   getTaskById(id: number) {
     this.taskService.getSpecialistById(id)
