@@ -1,8 +1,8 @@
 <div class="task" (click)="basicModal.show()" mdbWavesEffect>
-  <div class="task-name"></div>{{task.name}}
-  <div class="task-category-image"><img src="{{task.category_img}}" /></div>
-  <div class="task-price">{{task.price}}</div>
-  <div class="task-estimated_time">{{task.estimated_time}}</div>
+  <div class="task-item"><img src="{{task.category_img}}" /></div>
+  <div class="task-item"></div>{{task.name}}
+
+  <div class="task-item">{{task.price}}</div>
 
 </div>
 
@@ -28,7 +28,7 @@
   </iframe>
       </div>
       <div class="modal-footer">
-        <p class="me-auto">{{task.price}} zł</p>
+        <p class="me-auto">{{task.price}}</p>
         <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Apply</button>
         <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Message</button>
       </div>

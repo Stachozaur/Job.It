@@ -10,7 +10,7 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const specialists = [
       {
-        id: 1, name: "Janusz", category: "Hydraulik", description: "Kompleksowe usługi hydrauliczne", longDescription: ["– Pogotowie hydrauliczne 24h", "– Montaż i naprawa armatury łazienkowe", "– Udrażnianie rur i kanalizacji", "– Montaże i wymiany hydrauliczne", "– Czyszczenie kanalizacji i odpływów", "– Naprawa WC", "– Naprawa i wymiana kranów oraz natrysków", "– Podłączanie pralek i zmywarek", "– Modernizacja już istniejących instalacji hydraulicznych", "– Projektowanie nowych instalacji hydraulicznych", "– Drobne prace hydrauliczne"], img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj', adress: "https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus &q=Grzybowska10,Warszawa" }, 
+        id: 1, name: "Janusz", category: "Hydraulik", description: "Kompleksowe usługi hydrauliczne", longDescription: ["– Pogotowie hydrauliczne 24h", "– Montaż i naprawa armatury łazienkowe", "– Udrażnianie rur i kanalizacji", "– Montaże i wymiany hydrauliczne", "– Czyszczenie kanalizacji i odpływów", "– Naprawa WC", "– Naprawa i wymiana kranów oraz natrysków", "– Podłączanie pralek i zmywarek", "– Modernizacja już istniejących instalacji hydraulicznych", "– Projektowanie nowych instalacji hydraulicznych", "– Drobne prace hydrauliczne"], img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' }, 
       {
         id: 2, name: "Marian", category: "Fryzjer", description: "Salon fryzjerski na ul. Pięknej", longDescription: "Boki króto, góra długo? Nie ma sprawy, ale ombre i trwała to także moja wizytówka!", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj'},
       { id: 3, name: "Ania", category: "Prawnik", description: "Pomoc prawna", longDescription: "Sporządzanie i negocjowanie umów najmu, reprezentowanie wynajmujących i najemców, badania prawne (audyty) nieruchomości, reprezentacja w sporach ze wspólnotami mieszkaniowymi, umowy deweloperskie.", img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
@@ -24,11 +24,11 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 11, name: "Maciej", category: "Angular Developer", description:"Sterowniki do urządzeń muzycznych", longDescription: 'Programowanie sterowników do urządzeń muzycznych', img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 12, name: "Piotr", category: "Javascript Developer", description: "Strony i aplikacje webowe", longDescription: 'Tworzenie stron WWW, zapewniając interaktywność stron oraz obsługę zdarzeń, walidacji formularzy czy budowanie elementów nawigacyjnych. ', img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
       { id: 13, name: "Marcin", category: "C# Developer",  description: "Aplikacje Obiektowe C#", longDescription: 'Programowanie obiektowe C#, zaawansowane aplikacje .NET oraz Xamarin', img: 'https://yt3.ggpht.com/ytc/AAUvwngIWg09UzL7PK4Tewj8g-JjuLC_V2x1_egyMDtYcQ=s900-c-k-c0x00ffffff-no-rj' },
-      { id: 14, name: "Tycjan", category: "C# Developer", description: 'Suza >> Amras', longDescription: '.Netowe aplikacjie oraz C#, ale i tak nie znajdę czasu by wam odpisać.', img: 'https://images.theconversation.com/files/225151/original/file-20180627-112641-idgmo2.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop' },
+      { id: 14, name: "Tycjan", category: "C# Developer", description: 'Organgutan Developer', longDescription: '.Netowe aplikacjie oraz C#, ale i tak nie znajdę czasu by wam odpisać.', img: 'https://images.theconversation.com/files/225151/original/file-20180627-112641-idgmo2.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop' },
     ];
 
     const tasks = [
-      {id: 1, name: "Zabij Koluszkowskiego Orangutana", category: "Murder", price: 500},
+      {id: 1, name: "Zabij Koluszkowskiego Orangutana", category: "Murder", price: 500, estimatedTime: 120},
       {
         id: 2,
         name: "bridal hairstyle",

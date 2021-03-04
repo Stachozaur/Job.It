@@ -2,13 +2,15 @@
 <div class="specialists">
       <div *ngFor="let specialist of specialists" class="specialist">
         <mdb-card [cascade]="true" class="karta">
-          <div class="view view-cascade overlay waves-light logotype" mdbWavesEffect>
-            <!-- <mdb-card-img src="{{specialist.img}}" class="krzysiu"></mdb-card-img> -->
-            <img class="img-fluid" src="{{specialist.img}}" alt="undefined">
-            <a>
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
+          <a routerLink="/specialist/{{specialist.id}}">
+            <div class="view view-cascade overlay waves-light logotype" mdbWavesEffect>
+              <!-- <mdb-card-img src="{{specialist.img}}" class="krzysiu"></mdb-card-img> -->
+              <img class="img-fluid" src="{{specialist.img}}" alt="undefined">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          </a>
           <div class="card-body-mdb">
           <!-- https://mdbootstrap.com/img/Photos/Others/men.jpg -->
           <mdb-card-body [cascade]="true" class="text-center textfield">
