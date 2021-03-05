@@ -22,9 +22,7 @@ export class ModalPopupComponent implements OnInit {
 
   task!: Task;
 
-  iconName: IconName = "dog";
-  //dog: IconName = 'dog';
-  //cut: IconName = 'cut';
+
   iconPrefix: IconPrefix = 'fas';
   constructor(private route: ActivatedRoute, private taskService: TaskService, library: FaIconLibrary) {
     library.addIcons(faDumbbell, faCut, faDog);
