@@ -1,13 +1,17 @@
 <div class="task" (click)="basicModal.show()" mdbWavesEffect>
+  <div class="task-item" id="task-image"><app-font-awesome-renderer  [icon]="task.category_img"></app-font-awesome-renderer></div>
+  <div class="task-item" id="task-name">{{task.name}}</div>
   <div class="task-item">
     <i [ngStyle]="{'background-color': task.color }" class="fas fa-{{task.category_img}}"></i>
   </div>
   <div class="task-item"></div>
   {{task.name}}
 
+  <div class="task-item" id="task-price">{{task.price}}</div>
   <div class="task-item">{{task.price}}</div>
 </div>
 
+</div>
 
 <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
      aria-hidden="true">
@@ -17,17 +21,16 @@
         <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
           <span aria-hidden="true">×</span>
         </button>
-        <h4 class="modal-title w-100" id="myModalLabel">{{task.category}}</h4>
+        <h4 class="modal-title w-100" id="myModalLabel">{{task.name}}</h4>
       </div>
       <div class="modal-body">
-        {{task.name}}
-        <iframe
-          width="475"
-          height="450"
-          style="border:0"
-          loading="lazy"
-          allowfullscreen
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus
+        {{task.category}}
+        <iframe width="475"
+                height="450"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus
     &q=Polna10,Warszawa">
         </iframe>
       </div>

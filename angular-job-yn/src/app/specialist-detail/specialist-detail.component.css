@@ -109,3 +109,7 @@
     font-size: .94rem;
     margin: 1rem;
   }
+
+.description{
+    font-style:italic;
+}

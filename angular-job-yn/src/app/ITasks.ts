@@ -1,3 +1,5 @@
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
 export interface Task {
   id: number;
   name: string;
@@ -5,6 +7,6 @@ export interface Task {
   price: number;
   address: string;
   estimated_time: number;
-  category_img: string;
+  category_img: IconDefinition;
   color: string;
 }

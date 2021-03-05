@@ -16,6 +16,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ModalPopupComponent } from './modal-popup/modal-popup.component';
 import { SpecialistDetailComponent } from './specialist-detail/specialist-detail.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { FontAwesomeRendererComponent } from './font-awesome-renderer/font-awesome-renderer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     FooterComponent,
     ModalPopupComponent,
     SpecialistListComponent,
-    SpecialistDetailComponent
+    SpecialistDetailComponent,
+    FontAwesomeRendererComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     MdbModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
-    NgbModule
+    NgbModule,
+    FontAwesomeModule,
   ],
   exports: [
     HeaderComponent,
