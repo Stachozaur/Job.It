@@ -16,3 +16,11 @@
   .task:hover {
     background-color: #f0f0f5;
   }
+
+  .task-item > i {
+    background-color: #03a9f4;
+    border-radius: 50%;
+    width: 3em;
+    line-height: 3em;
+    text-align: center;
+  }

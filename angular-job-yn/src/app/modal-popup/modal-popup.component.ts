@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Task } from '../ITasks';
-import { TaskService} from '../task.service';
-import { ActivatedRoute } from '@angular/router';
+import {Component, OnInit, Input} from '@angular/core';
+import {Task} from '../ITasks';
+import {TaskService} from '../task.service';
+// @ts-ignore
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -11,18 +12,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ModalPopupComponent implements OnInit {
 
-  @Input() id! : number;
+  @Input() id!: number;
 
-  task! : Task;
-  constructor(private route: ActivatedRoute, private taskService : TaskService ) { }
+  task!: Task;
+
+  constructor(private route: ActivatedRoute, private taskService: TaskService) {
+  }
 
   ngOnInit(): void {
     // let id = +this.route.snapshot.paramMap.get('id')!;
-    this.getTaskById(this.id)
+    this.getTaskById(this.id);
   }
 
-  getTaskById(id: number) {
+  getTaskById(id: number): void {
     this.taskService.getSpecialistById(id)
-        .subscribe(task => this.task = task);
-}
+      .subscribe((task: Task) => this.task = task);
+  }
 }

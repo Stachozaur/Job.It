@@ -6,4 +6,5 @@ export interface Task {
   address: string;
   estimated_time: number;
   category_img: string;
+  color: string;
 }

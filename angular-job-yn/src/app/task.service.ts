@@ -11,7 +11,7 @@ export class TaskService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  private taskUrl = 'api/tasks'
+  private taskUrl = 'api/tasks';
 
   constructor( private http: HttpClient) { }
 
@@ -20,7 +20,7 @@ export class TaskService {
   }
 
   getSpecialistById(id: number): Observable<Task> {
-    const url = `${this.taskUrl}/${id}`
+    const url = `${this.taskUrl}/${id}`;
     return this.http.get<Task>(url);
   }
 }

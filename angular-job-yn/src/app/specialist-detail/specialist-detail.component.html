@@ -1,49 +1,47 @@
-<body>
-  <div class="row">
-    <div class="leftcolumn">
-      <div style="height:350px;"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmFyYmVyc2hvcHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" style="height:350px; width:1000px;" /></div>
-      <h2>{{specialist.name}}</h2>
-      <h5>{{specialist.category}}, March 3, 2021</h5>
-      <div class="card-body card-body-cascade text-center wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-name: fadeIn; animation-iteration-count: 1; animation-delay: 0.2s;">
+<div class="row">
+  <div class="leftcolumn">
+    <div style="height:350px;"><img
+      src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmFyYmVyc2hvcHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+      style="height:350px; width:1000px;"/></div>
+    <h2>{{specialist.name}}</h2>
+    <h5>{{specialist.category}}, March 3, 2021</h5>
+    <div class="card-body card-body-cascade text-center wow fadeIn" data-wow-delay="0.2s"
+         style="visibility: visible; animation-name: fadeIn; animation-iteration-count: 1; animation-delay: 0.2s;">
 
-        <a class="btn btn-primary btn-lg waves-effect waves-light">Visit</a>
-        <a class="btn btn-secondary btn-lg waves-effect waves-light">Message</a><a class="btn btn-default btn-lg waves-effect waves-light">Send Feedback</a>
-
-      </div>
-
-      <div class="card">
-        <h3>Services</h3>
-        <div *ngFor="let service of specialist.longDescription">
-          {{service}}
-
-        </div>
-      </div>
-      </div>
-    <div class="rightcolumn">
-      <div class="card">
-        <h2>About</h2>
-
-        <div class="fakeimg" style="height:350px;"><img class="img-fluid" src="{{specialist.img}}" alt="undefined" style="height:300px;"></div>
-        <p>{{specialist.description}}</p>
-      </div>
-
-      <div class="card">
-        <h3>Adress</h3>
-        <iframe width="400"
-                height="400"
-                style="border:0"
-                loading="lazy"
-                allowfullscreen
-
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus&q=Polna10,Warszawa">
-        </iframe>
-      </div>
+      <a class="btn btn-primary btn-lg waves-effect waves-light">Visit</a>
+      <a class="btn btn-secondary btn-lg waves-effect waves-light">Message</a><a
+      class="btn btn-default btn-lg waves-effect waves-light">Send Feedback</a>
 
     </div>
-    
+
+    <div class="card">
+      <h3>Services</h3>
+      <div *ngFor="let service of specialist.longDescription">
+        {{service}}
+      </div>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About</h2>
+
+      <div class="fakeimg" style="height:350px;"><img class="img-fluid" src="{{specialist.img}}" alt="undefined"
+                                                      style="height:300px;"></div>
+      <p>{{specialist.description}}</p>
+    </div>
+
+    <div class="card">
+      <h3>Adress</h3>
+      <iframe width="400"
+              height="400"
+              style="border:0"
+              loading="lazy"
+              allowfullscreen
+
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus&q=Polna10,Warszawa">
+      </iframe>
+    </div>
+
   </div>
 
-
-
-
-</body>
+</div>
