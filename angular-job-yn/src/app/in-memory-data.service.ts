@@ -14,7 +14,7 @@ export class InMemoryDataService implements InMemoryDbService {
         name: "Mario Pipeman",
         category: "Plumber",
         description: "Complex plumbing services",
-        longDescription: ["-24h plumbing emergency service",
+        longDescription: [" -24h plumbing emergency service",
           "- Assembly and repair of bathroom fittings",
           "- Unblocking pipes and drains",
           "- Plumbing assemblies and replacements",

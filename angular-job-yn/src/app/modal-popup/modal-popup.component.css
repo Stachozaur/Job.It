@@ -31,19 +31,12 @@
 }
 
 
-/*.task, .ng-fa-icon {
-background-color: red;
-border-radius: 50%;
-height: 40px;
-width: 40px;
-align-items: center;
-}
-*/
-
   .task-item > i {
     background-color: #03a9f4;
     border-radius: 50%;
-    width: 3em;
-    line-height: 3em;
+    width: 2em;
+    line-height: 2em;
     text-align: center;
+  
+    
   }
