@@ -103,7 +103,8 @@ export class InMemoryDataService implements InMemoryDbService {
         price: 40,
         estimatedTime: 120,
         category_img: 'cut',
-        color: "purple"
+        color: "purple",
+        address: 'Polna10,Warszawa'
       },
       {
         id: 2,
@@ -113,17 +114,19 @@ export class InMemoryDataService implements InMemoryDbService {
         price: 50,
         estimatedTime: 180,
         category_img: 'dumbbell',
-        color: "red"
+        color: "red",
+        address: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus&q=Skarbka z Gór 20,Warszawa'
       },
       {
         id: 3,
-        name: "dog walking",
-        category: "animals",
+        name: "Dog Walking",
+        category: "Animals",
         description: "I need someone to walk my dog for 40 minutes",
         price: 20,
         estimatedTime: 40,
         category_img: 'dog',
-        color: "green"
+        color: "green",
+        address: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus&q=Polna10,Warszawa'
       },
     ];
     return {specialists, tasks};

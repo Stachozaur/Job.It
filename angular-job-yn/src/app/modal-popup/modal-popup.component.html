@@ -1,18 +1,18 @@
 <div class="task" (click)="basicModal.show()" mdbWavesEffect>
 
-  <div class="task-item">
+  <!-- <div class="task-item">
     <i [ngStyle]="{'background-color': task.color }" class="fas fa-{{task.category_img}}"></i>
   </div>
   <div class="task-item">
     {{task.name}}
   </div>
-  <div class="task-item">{{task.price}}</div>
+  <div class="task-item">{{task.price}}</div> -->
 
-  <!--to nasze-->
-  <!--<div class="task-item" id="task-image"><app-font-awesome-renderer [icon]="task.category_img"></app-font-awesome-renderer></div>
+  <!-- to nasze-->
+  <div class="task-item" id="task-image" [ngStyle]="{'background-color': task.color }" ><app-font-awesome-renderer [icon]="task.category_img"></app-font-awesome-renderer></div>
 
   <div class="task-item" id="task-name">{{task.name}}</div>
-  <div class="task-item" id="task-price">{{task.price}}</div>-->
+  <div class="task-item" id="task-price">{{task.price}}</div>
 
 </div>
 
@@ -26,10 +26,10 @@
         <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
           <span aria-hidden="true">×</span>
         </button>
-        <h4 class="modal-title w-100" id="myModalLabel">{{task.name}}</h4>
+        <h4 class="modal-title w-100" id="myModalLabel">{{task.category}}</h4>
       </div>
       <div class="modal-body">
-        {{task.category}}
+        {{task.name}}
         <iframe width="475"
                 height="450"
                 style="border:0"
@@ -40,7 +40,7 @@
         </iframe>
       </div>
       <div class="modal-footer">
-        <p class="me-auto">{{task.price}}</p>
+        <p class="me-auto">{{task.price}} zł</p>
         <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
                 (click)="basicModal.hide()" mdbWavesEffect>Apply
         </button>

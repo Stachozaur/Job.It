@@ -12,31 +12,34 @@
 
 }
 
-  .task:hover {
-    background-color: #f0f0f5;
-  }
+.task:hover {
+  background-color: #f0f0f5;
+}
 
-  .task-item{
-      padding-left: 10px;
-  }
+.task-item{
+    margin-left: 10px;
+}
 
-  .task-item, #task-name{
-      font-family:'Times New Roman', Times, serif;
-      font-size: 20px;
-  }
+.task-item, #task-name{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+}
 
 .task-item, #task-price {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 25px;
+font-family: 'Times New Roman', Times, serif;
+font-size: 25px;
 }
 
 
-  .task-item > i {
-    background-color: #03a9f4;
-    border-radius: 50%;
-    width: 2em;
-    line-height: 2em;
-    text-align: center;
-  
-    
-  }
+#task-image  {
+  border-radius: 50%;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+
+
+.category-icon{
+  position: relative;
+  bottom: 7px;
+}
