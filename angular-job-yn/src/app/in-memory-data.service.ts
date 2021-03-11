@@ -104,7 +104,8 @@ export class InMemoryDataService implements InMemoryDbService {
         estimatedTime: 120,
         category_img: 'cut',
         color: "purple",
-        address: 'Polna10,Warszawa'
+        address: 'Polna 10, Warszawa',
+        category_path: '/assets/images/Barber_category.svg'
       },
       {
         id: 2,
@@ -115,7 +116,8 @@ export class InMemoryDataService implements InMemoryDbService {
         estimatedTime: 180,
         category_img: 'dumbbell',
         color: "red",
-        address: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus&q=Skarbka z Gór 20,Warszawa'
+        address:  'Modlińska 168, Warszawa',
+        category_path: '/assets/images/hantlav2.svg'
       },
       {
         id: 3,
@@ -126,7 +128,8 @@ export class InMemoryDataService implements InMemoryDbService {
         estimatedTime: 40,
         category_img: 'dog',
         color: "green",
-        address: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus&q=Polna10,Warszawa'
+        address: 'Park Bródnowski, Warszawa',
+        category_path: '/assets/images/dogev2_cat.svg'
       },
     ];
     return {specialists, tasks};

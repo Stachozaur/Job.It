@@ -9,4 +9,5 @@ export interface Task {
   estimated_time: number;
   category_img: IconDefinition;
   color: string;
+  category_path: string;
 }

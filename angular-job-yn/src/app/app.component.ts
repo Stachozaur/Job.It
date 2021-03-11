@@ -9,6 +9,9 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'Job.yn';
+
+  lat = 22.2736308;
+  long = 70.7512555;
   constructor(private titleService: Title) { }
 
   ngOnInit() {

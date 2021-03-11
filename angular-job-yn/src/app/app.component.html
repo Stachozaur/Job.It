@@ -9,4 +9,11 @@
   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus
     &q=Ziemowita 11,Łódź">
 </iframe> -->
+<agm-map [latitude]='lat' [longitude]='long'>
+
+  <agm-marker [latitude]="lat" [longitude]="long">
+  </agm-marker>
+
+</agm-map>
+
 <app-footer></app-footer>

@@ -43,3 +43,7 @@ font-size: 25px;
   position: relative;
   bottom: 7px;
 }
+
+agm-map {
+  height:450px;
+}

@@ -1,24 +1,17 @@
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <div *ngFor="let task of tasks">
 
-  <div class="row">
-    <div class="leftcolumn">
-      <div class="card">
-        <div *ngFor="let task of tasks">
-
-            <app-modal-popup [id]="task.id"></app-modal-popup>
+        <app-modal-popup [id]="task.id"></app-modal-popup>
 
 
-        </div>
       </div>
     </div>
-    <div class="rightcolumn">
-      <iframe width="800"
-              height="800"
-              style="border:0"
-              loading="lazy"
-              allowfullscreen
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus
-    &q=Mokotów,Warszawa">
-      </iframe>
-    </div>
-    
   </div>
+  <div class="rightcolumn">
+    <agm-map [zoom]="6" [latitude]='lat' [longitude]='long' [mapTypeId]="'roadmap'">
+    </agm-map>
+  </div>
+
+</div>

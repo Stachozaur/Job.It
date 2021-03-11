@@ -18,6 +18,8 @@ import { SpecialistDetailComponent } from './specialist-detail/specialist-detail
 import { HomePageComponent } from './home-page/home-page.component';
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { FontAwesomeRendererComponent } from './font-awesome-renderer/font-awesome-renderer.component';
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -40,12 +42,16 @@ import { FontAwesomeRendererComponent } from './font-awesome-renderer/font-aweso
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }),
+      InMemoryDataService, { passThruUnknownUrl: true ,dataEncapsulation: false }),
     MdbModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     NgbModule,
     FontAwesomeModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus',
+      libraries: ['places']
+    })
   ],
   exports: [
     HeaderComponent,

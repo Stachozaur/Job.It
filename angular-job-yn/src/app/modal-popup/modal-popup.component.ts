@@ -3,10 +3,7 @@ import {Task} from '../ITasks';
 import {TaskService} from '../task.service';
 // @ts-ignore
 import {ActivatedRoute} from '@angular/router';
-import { faDumbbell, faCut, faDog, IconName, IconPrefix } from '@fortawesome/free-solid-svg-icons';
-import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-
+import { GeocodingService } from '../geocoding.service';
 
 
 
@@ -20,25 +17,42 @@ export class ModalPopupComponent implements OnInit {
   @Input() id!: number;
 
   task!: Task;
+  loaded: boolean = false;
+  lat!: number;
+  long!: number;
+  coordinates: any;
 
-  // constructor(private route: ActivatedRoute, private taskService: TaskService) {
-  // }
-
-
-  //to nasze
-  iconPrefix: IconPrefix = 'fas';
-  constructor(private route: ActivatedRoute, private taskService: TaskService, library: FaIconLibrary) {
-   library.addIcons(faDumbbell, faCut, faDog);
+  icon : any = {
+    url: '',
+    scaledSize: {
+      width: 40,
+      height: 40
+    }
+}
+  constructor(private route: ActivatedRoute, private taskService: TaskService, private geocodingService: GeocodingService) {
   }
 
 
   ngOnInit(): void {
-    // let id = +this.route.snapshot.paramMap.get('id')!;
-    this.getTaskById(this.id);
+    this.getTaskById(this.id)
   }
 
   getTaskById(id: number): void {
     this.taskService.getSpecialistById(id)
-      .subscribe((task: Task) => this.task = task);
+      .subscribe((task: Task) => this.task = task
+      ).add(() => {
+        this.geocodingService.getLatLong(this.task.address).subscribe(data => {
+          this.coordinates = data;
+          this.unpackCoordinates();
+          this.icon.url = this.task.category_path;
+          this.loaded = true;
+        })
+      });
   }
+
+  private unpackCoordinates() : void{
+    this.lat = this.coordinates['results'][0]['geometry']['location']['lat']
+    this.long = this.coordinates['results'][0]['geometry']['location']['lng']
+  }
+
 }
