@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -18,6 +18,8 @@ import { SpecialistDetailComponent } from './specialist-detail/specialist-detail
 import { HomePageComponent } from './home-page/home-page.component';
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { FontAwesomeRendererComponent } from './font-awesome-renderer/font-awesome-renderer.component';
+import { TaskModalComponent } from './task-modal/task-modal.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { FontAwesomeRendererComponent } from './font-awesome-renderer/font-aweso
     ModalPopupComponent,
     SpecialistListComponent,
     SpecialistDetailComponent,
-    FontAwesomeRendererComponent
+    FontAwesomeRendererComponent,
+    TaskModalComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -46,6 +50,7 @@ import { FontAwesomeRendererComponent } from './font-awesome-renderer/font-aweso
     MDBBootstrapModule.forRoot(),
     NgbModule,
     FontAwesomeModule,
+    ReactiveFormsModule 
   ],
   exports: [
     HeaderComponent,

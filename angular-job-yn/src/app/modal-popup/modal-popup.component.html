@@ -1,51 +1,55 @@
-<div class="task" (click)="basicModal.show()" mdbWavesEffect>
+<ng-container *ngIf="task">
 
-  <div class="task-item">
-    <i [ngStyle]="{'background-color': task.color }" class="fas fa-{{task.category_img}}"></i>
+  <div class="task" (click)="basicModal.show()" mdbWavesEffect>
+
+    <div class="task-item">
+      <i [ngStyle]="{'background-color': task.color }" class="fas fa-{{task.category_img}}"></i>
+    </div>
+    <div class="task-item">
+      {{task.name}}
+    </div>
+    <div class="task-item">{{task.price}}</div>
+
+    <!--to nasze-->
+    <!--<div class="task-item" id="task-image"><app-font-awesome-renderer [icon]="task.category_img"></app-font-awesome-renderer></div>
+
+    <div class="task-item" id="task-name">{{task.name}}</div>
+    <div class="task-item" id="task-price">{{task.price}}</div>-->
+
   </div>
-  <div class="task-item">
-    {{task.name}}
-  </div>
-  <div class="task-item">{{task.price}}</div>
-
-  <!--to nasze-->
-  <!--<div class="task-item" id="task-image"><app-font-awesome-renderer [icon]="task.category_img"></app-font-awesome-renderer></div>
-
-  <div class="task-item" id="task-name">{{task.name}}</div>
-  <div class="task-item" id="task-price">{{task.price}}</div>-->
-
-</div>
 
 
 
-<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
-          <span aria-hidden="true">×</span>
-        </button>
-        <h4 class="modal-title w-100" id="myModalLabel">{{task.name}}</h4>
-      </div>
-      <div class="modal-body">
-        {{task.category}}
-        <iframe width="475"
-                height="450"
-                style="border:0"
-                loading="lazy"
-                allowfullscreen
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus
+  <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title w-100" id="myModalLabel">{{task.name}}</h4>
+        </div>
+        <div class="modal-body">
+          {{task.category}}
+          <iframe width="475"
+                  height="450"
+                  style="border:0"
+                  loading="lazy"
+                  allowfullscreen
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NyJo8nmwODZm5IDASbhGBEngXkXsMus
     &q=Polna10,Warszawa">
-        </iframe>
-      </div>
-      <div class="modal-footer">
-        <p class="me-auto">{{task.price}}</p>
-        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
-                (click)="basicModal.hide()" mdbWavesEffect>Apply
-        </button>
-        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Message</button>
+          </iframe>
+        </div>
+        <div class="modal-footer">
+          <p class="me-auto">{{task.price}}</p>
+          <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
+                  (click)="basicModal.hide()" mdbWavesEffect>
+            Apply
+          </button>
+          <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Message</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  </ng-container>

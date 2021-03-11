@@ -57,7 +57,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 4,
         name: "Eddie Hall",
         category: "Personal Trainer",
-        description: "Workouts and body repair",
+        description: "Keep making your body bigger and bigger",
         longDescription: ["-Professional powerlifting training",
           "-strongman training",
           "-Diagnosis and strengthening of weak joints",

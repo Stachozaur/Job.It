@@ -25,13 +25,12 @@ export class ModalPopupComponent implements OnInit {
   }
 
 
-  //to nasze
   //iconPrefix: IconPrefix = 'fas';
   //constructor(private route: ActivatedRoute, private taskService: TaskService, library: FaIconLibrary) {
   //  library.addIcons(faDumbbell, faCut, faDog);
   //}
 
-  
+
 
 
   ngOnInit(): void {

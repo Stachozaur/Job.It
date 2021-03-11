@@ -3,8 +3,9 @@
     <div class="leftcolumn">
       <div class="card">
         <div *ngFor="let task of tasks">
-
+          <ng-container *ngIf="task">
             <app-modal-popup [id]="task.id"></app-modal-popup>
+          </ng-container>
 
 
         </div>
@@ -20,5 +21,5 @@
     &q=Mokotów,Warszawa">
       </iframe>
     </div>
-    
+
   </div>

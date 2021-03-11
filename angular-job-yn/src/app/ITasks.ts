@@ -5,8 +5,9 @@ export interface Task {
   name: string;
   category: string;
   price: number;
-  address: string;
+  adress: string;
   estimated_time: number;
   category_img: IconDefinition;
   color: string;
+  description: string;
 }
